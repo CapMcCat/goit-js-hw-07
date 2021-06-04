@@ -4,12 +4,17 @@
 
 const ingredients = ["Картошка", "Грибы", "Чеснок", "Помидоры", "Зелень", "Приправы"]
 
-const listItemEls = ingredients.map((ingredient) => {
-  const listItemEl = document.createElement("li")
-  listItemEl.textContent = ingredient
-  return listItemEl
-})
+const createListItems = (ingredients) => {
+  return ingredients.map((ingredient) => {
+    const listItemEl = document.createElement("li")
+    listItemEl.textContent = ingredient
+    return listItemEl
+  })
+}
+const listItemEls = createListItems(ingredients)
 
 const listRef = document.querySelector("#ingredients")
+
+console.log(listItemEls)
 
 listRef.append(...listItemEls)
