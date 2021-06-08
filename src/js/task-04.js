@@ -10,7 +10,7 @@ const incrBtnRef = document.querySelector(' button[data-action="increment"]')
 
 const spanRef = document.querySelector("#value")
 
-let counterValue = spanRef.textContent
+let counterValue = Number(spanRef.textContent)
 
 decrBtnRef.addEventListener("click", (event) => {
   counterValue -= 1
