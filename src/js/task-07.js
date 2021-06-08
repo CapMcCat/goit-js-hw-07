@@ -7,9 +7,11 @@ const refs = {
   span: document.querySelector("#text"),
 }
 
+const startFontSize = `${refs.input.value}px`
+refs.span.style.fontSize = startFontSize
+
 refs.input.addEventListener("input", onInputRangeChange)
 
 function onInputRangeChange(event) {
-  console.log(refs.input.value)
   refs.span.style.fontSize = `${refs.input.value}px`
 }
